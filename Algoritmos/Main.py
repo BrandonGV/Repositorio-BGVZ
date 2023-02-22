@@ -12,3 +12,4 @@ print(type(b))
 c = "a"
 print(type(c))
 #validacion de github
+#sincronizacion visual studio
