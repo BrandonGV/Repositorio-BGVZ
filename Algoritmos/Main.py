@@ -11,5 +11,4 @@ b = 2.33
 print(type(b))
 c = "a"
 print(type(c))
-
-print("push a git hub")
+#validacion de github
