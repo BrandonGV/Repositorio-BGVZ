@@ -1,6 +1,8 @@
 #Importar libreria
 import random
+from time import time
 #Opciones
+tiempo_inicial = time()
 op = ("Piedra","Papel","Tijera")
 contador=0
 puntuacion_usuario=0
@@ -51,6 +53,12 @@ while True:
         print("*"*20)
         if contador==contador1:
             print(f"El resultado final fue la cpu con {puntuacion_cpu} puntos y el usuario tuvo {puntuacion_usuario} puntos")
+            tiempo_final = time()
+            tiempo_total = tiempo_final - tiempo_inicial
+            print("ESTE PROGRAMA SE EJECUTO EN:")
+            print(tiempo_total*1000) 
+            print("MILISEGUNDOS")
+            
             break
 """""
     if puntuacion_usuario>puntuacion_cpu:
