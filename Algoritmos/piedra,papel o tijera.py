@@ -58,6 +58,7 @@ while True:
             print("ESTE PROGRAMA SE EJECUTO EN:")
             print(tiempo_total*1000) 
             print("MILISEGUNDOS")
+            
             break
 """""
     if puntuacion_usuario>puntuacion_cpu:
