@@ -35,3 +35,9 @@ print(lista)
 #lista de 100 datos
 lista_aleatoria =[random.randint(1,100) for i in range(100)]
 print(lista_aleatoria)
+lista_aleatoria.sort()#ascendente
+print(lista_aleatoria)
+lista_aleatoria.sort(reverse=True)#ascendente
+print(lista_aleatoria)
+#elimina los repetidos
+lista_f =list(set(lista_aleatoria))
