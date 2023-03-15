@@ -1,15 +1,16 @@
 #Importar libreria
 import random
+from time import time
 #Opciones
-contador1=int(input("cuantas rondas quieres jugar: "))
+tiempo_inicial = time()
 op = ("Piedra","Papel","Tijera")
-contador=1
+contador=0
 puntuacion_usuario=0
 puntuacion_cpu=0
-ganador=0
-while ganador>=0:
-    while contador<=contador1:
-        #Entradas
+contador1=int(input("cuantas rondas quieres jugar: "))
+while True:
+     #Entradas
+        print("*"*20)
         contador += 1
         usuario = input("Digite la opción Pierdra, Papel o Tijera:  ")
         cpu = random.choice(op)
@@ -41,12 +42,24 @@ while ganador>=0:
         elif usuario == "Tijera" and cpu == "Papel":
             print("Gana usuario!!!")
             puntuacion_usuario +=1
-
+       
         else:
             print("Error!!!")
             contador -=1
-        print(f"vas {puntuacion_usuario} puntos y la cpu va {puntuacion_cpu} puntos")
-
+        print("*"*20)
+        print(f"Vas {puntuacion_usuario} puntos ")
+        print(f"la cpu va {puntuacion_cpu} puntos")
+        print(f"Ronda {contador}")
+        print("*"*20)
+        if contador==contador1:
+            print(f"El resultado final fue la cpu con {puntuacion_cpu} puntos y el usuario tuvo {puntuacion_usuario} puntos")
+            tiempo_final = time()
+            tiempo_total = tiempo_final - tiempo_inicial
+            print("ESTE PROGRAMA SE EJECUTO EN:")
+            print(tiempo_total*1000) 
+            print("MILISEGUNDOS")
+            break
+"""""
     if puntuacion_usuario>puntuacion_cpu:
         print(f"gana el usuario con {puntuacion_usuario} puntos y perdio la cpu con {puntuacion_cpu} puntos")
         break
@@ -56,7 +69,9 @@ while ganador>=0:
     elif puntuacion_cpu==puntuacion_usuario:
         print(f"fue un empate la cpu gano {puntuacion_cpu} y tu tuviste{puntuacion_usuario}  puntos¨")
         print("Fue un empate se vuelve a jugar :v")
-        break
+        ganador +=1
+"""
+        
        
         
         
